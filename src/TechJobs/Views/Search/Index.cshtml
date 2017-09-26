@@ -22,7 +22,7 @@
         <input type="text" name="searchTerm" id="searchTerm" />
     </p>
 
-    <input type="submit" value="Search" />
+    <input class="btn btn-default" type="submit" value="Search" />
 </form>
 
 <hr />
@@ -32,15 +32,13 @@
 
     <h3>@ViewBag.jobs.Count Result(s)</h3>
 
-    // TODO #2 - Loop over jobs dictionary and display all job fields
-    
     @foreach (Dictionary<string, string> listings in ViewBag.jobs)
     {
         <table class="job-listing">
         @foreach (KeyValuePair<string, string> job in listings)
         {
             <tr>
-                <td>@job.Key</td>
+                <td>@job.Key.</td>
                 <td>@job.Value</td>
             </tr>  
         }
